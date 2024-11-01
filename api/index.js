@@ -2,7 +2,7 @@ const express =  require("express")
 const cors =  require("cors")
 const axios = require('axios');
 const cheerio = require("cheerio");
-const Repositorio = require('./Repositorio');
+const Repositorio = require('../Repositorio');
 
 function retornaUrlRepositorios (page){
     return `https://github.com/CarlosHLP060304?tab=repositories&page=${page}`;
@@ -21,7 +21,7 @@ router.get("/CarlosHLP060304",async(req,res)=>{
     res.send(repositorios)
 })
 
-router.listen(8000)
+router.listen(8080)
 
 async function getRepositorios(page) {
     let repositorios = [];
