@@ -16,7 +16,7 @@ let router = express()
 
 router.use(cors())
 
-router.get("/CarlosHLP060304",async(req,res)=>{
+router.get("/",async(req,res)=>{
     let repositorios = await getRepositorios(req.query.page)
     res.send(repositorios)
 })
